@@ -20,7 +20,8 @@ body {
 }
 
 .lp {
-  width: min(100%, 1024px);
+  width: 100%;
+  max-width: 675px;
   margin-inline: auto;
   overflow: hidden;
 }
@@ -32,7 +33,14 @@ body {
 .lp__image img {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
+}
+
+@media (min-width: 768px) {
+  .lp {
+    width: 60.7vw;
+  }
 }
 
 .visually-hidden {
