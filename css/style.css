@@ -21,7 +21,7 @@ body {
 
 .lp {
   width: 100%;
-  max-width: 675px;
+  max-width: 500px;
   margin-inline: auto;
   overflow: hidden;
 }
@@ -39,7 +39,7 @@ body {
 
 @media (min-width: 768px) {
   .lp {
-    width: 60.7vw;
+    width: 45vw;
   }
 }
 
