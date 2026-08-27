@@ -11,6 +11,7 @@
 
 html {
   background: #001426;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -30,11 +31,150 @@ body {
   line-height: 0;
 }
 
+.lp__image--link-map {
+  position: relative;
+}
+
+.image-hotspot {
+  position: absolute;
+  z-index: 1;
+  display: block;
+}
+
+.image-hotspot--funabashi {
+  top: 51.2%;
+  left: 12.2%;
+  width: 75.2%;
+  height: 5%;
+}
+
+.image-hotspot--investment {
+  top: 79.5%;
+  left: 2.9%;
+  width: 48.2%;
+  height: 14%;
+}
+
+.image-hotspot--consultation,
+.image-hotspot--download {
+  top: 30.3%;
+  height: 17.4%;
+}
+
+.image-hotspot--consultation {
+  left: 2.7%;
+  width: 47.5%;
+}
+
+.image-hotspot--download {
+  left: 51.4%;
+  width: 46.8%;
+}
+
+.image-hotspot:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: -3px;
+}
+
 .lp__image img {
   display: block;
   width: 100%;
   max-width: 100%;
   height: auto;
+}
+
+.quick-contact {
+  padding: 0;
+  color: #fff;
+  background: #001426;
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+.quick-contact__inner {
+  padding: 14px 34px 10px;
+  border: 2px solid #bd8c25;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #07182a, #020e1b);
+  box-shadow: inset 0 0 0 3px #07182a, inset 0 0 0 4px #bd8c25;
+}
+
+.quick-contact h2 {
+  margin: 0;
+  text-align: center;
+  font-family: serif;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: .04em;
+}
+
+.quick-contact h2 strong { color: #d9a826; }
+.quick-contact h2 span { color: #aaa; }
+.quick-contact__inner > p { margin: 2px 0 10px; text-align: center; font-size: 10px; }
+.quick-contact__form { display: grid; gap: 3px; }
+.quick-row { display: grid; grid-template-columns: 30% 70%; min-height: 34px; margin: 0; border: 0; border-radius: 3px; overflow: hidden; color: #111; background: #f7f7f7; font-size: 10px; font-weight: 600; }
+.quick-row > span { display: flex; align-items: center; gap: 5px; padding: 8px 10px; border: 0; background: #e1e1e1; }
+.quick-row b { padding: 1px 3px; border-radius: 2px; color: #fff; background: #c9151e; font-size: 7px; }
+.quick-row em { padding: 1px 3px; border-radius: 2px; color: #fff; background: #888; font-size: 7px; font-style: normal; }
+.quick-row > input { min-width: 0; padding: 7px 14px; border: 0; outline-color: #bd8c25; font: inherit; font-weight: 400; }
+.quick-row--options > div { display: grid; grid-template-columns: repeat(2, 1fr); gap: 5px 12px; padding: 7px 14px; }
+.quick-row--options label { display: flex; gap: 6px; align-items: center; white-space: nowrap; }
+.quick-row--options input { width: 14px; height: 14px; }
+.quick-status { grid-template-columns: 1fr !important; }
+.quick-contact button { position: relative; width: 100%; padding: 9px 35px; margin-top: 5px; border: 0; border-radius: 3px; color: #fff; background: linear-gradient(#df2c30, #b90e13); font-family: serif; font-size: 18px; cursor: pointer; }
+.quick-contact button span { position: absolute; right: 20px; font-size: 28px; line-height: 18px; }
+.quick-contact small { display: block; margin-top: 5px; text-align: center; font-size: 8px; }
+
+.contact {
+  color: #111;
+  background: #fffdfa;
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+.contact__hero {
+  width: 100%;
+  aspect-ratio: 871 / 238;
+  overflow: hidden;
+}
+
+.contact__hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.contact__form { padding: 10px 20px 18px; background: #fffdfa; }
+.form-section { min-width: 0; padding: 0; margin: 0 0 8px; border: 1px solid #d7ae60; border-radius: 4px; overflow: hidden; }
+.form-section legend { display: block; float: left; width: 100%; padding: 7px 14px; color: #fff; background: #050505; font-size: 13px; }
+.form-section legend + * { clear: both; }
+.form-section legend b { margin-left: 8px; color: #f00000; font-weight: 500; }
+.form-section legend em { margin-left: 8px; color: #e6bc2e; font-style: normal; }
+.choice-grid { display: grid; gap: 8px 20px; padding: 12px 18px; }
+.choice-grid--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.choice-grid label, .consent { display: flex; gap: 9px; align-items: center; font-size: 12px; line-height: 1.5; }
+input[type="radio"], input[type="checkbox"] { flex: 0 0 17px; width: 17px; height: 17px; margin: 0; accent-color: #bb870e; }
+.form-row { display: grid; grid-template-columns: 30% 70%; align-items: center; min-height: 35px; padding: 3px 14px; border-top: 1px solid #ead5ae; font-size: 12px; font-weight: 600; }
+.form-row:first-of-type { border-top: 0; }
+.form-row input, .form-row select, textarea { width: 100%; padding: 8px 10px; border: 1px solid #d5d5d5; border-radius: 4px; color: #222; background: #fff; font: inherit; font-weight: 400; }
+.form-row--address > div { display: grid; gap: 4px; }
+.choice-grid--jobs { grid-template-columns: repeat(4, max-content); gap: 7px 14px; padding: 5px 0; }
+.input-unit { display: flex; align-items: center; gap: 8px; }
+.input-unit i { flex: 0 0 auto; font-style: normal; }
+.form-section--message { padding-bottom: 10px; }
+.form-section--message textarea { display: block; width: calc(100% - 28px); margin: 10px 14px; resize: vertical; }
+.consent { align-items: flex-start; margin: 10px 14px; }
+.consent a { color: #0786d1; }
+.contact button { display: flex; width: 55%; min-width: 210px; align-items: center; justify-content: center; gap: 30px; padding: 10px 16px; margin: 12px auto 0; border: 0; border-radius: 3px; color: #fff; background: linear-gradient(#dda919, #b47d00); box-shadow: 0 2px 5px #ccc; font-size: 16px; font-weight: 700; cursor: pointer; }
+.contact button span { display: grid; width: 23px; height: 23px; place-items: center; border-radius: 50%; color: #ad7c0d; background: #fff; font-size: 24px; line-height: 1; }
+
+@media (max-width: 480px) {
+  .quick-contact__inner { padding-inline: 18px; }
+  .quick-contact h2 { font-size: 19px; }
+  .quick-row { grid-template-columns: 35% 65%; }
+  .quick-row--options > div { padding-inline: 8px; }
+  .contact__form { padding-inline: 10px; }
+  .choice-grid--two { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; gap: 4px; padding-block: 7px; }
+  .choice-grid--jobs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (min-width: 768px) {
